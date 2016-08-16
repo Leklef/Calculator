@@ -58,53 +58,60 @@
         if (!operationEnter){
             NSLog(@"%li", (long)[sender tag]);
             if (operation == 101){
-                _vc.resultString = [NSString stringWithFormat:@"%g +", n];
-                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, m];
-                [_vc updateResultLabel];
+                _vc.resultString = [NSString stringWithFormat:@"%g +", m];
+                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, n];
                 n = m + n;
                 _vc.resultString = [NSString stringWithFormat:@"%@ = %g",_vc.resultString, n];
+                NSLog(@"%@",_vc.resultString);
+                [_vc updateResultLabel];
             }
             if (operation == 102){
-                _vc.resultString = [NSString stringWithFormat:@"%g -", n];
-                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, m];
+                _vc.resultString = [NSString stringWithFormat:@"%g -", m];
+                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, n];
                 n = m - n;
                 _vc.resultString = [NSString stringWithFormat:@"%@ = %g",_vc.resultString, n];
+                NSLog(@"%@",_vc.resultString);
+                [_vc updateResultLabel];
             }
             if (operation == 103){
-                _vc.resultString = [NSString stringWithFormat:@"%g *", n];
-                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, m];
+                _vc.resultString = [NSString stringWithFormat:@"%g *", m];
+                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, n];
                 n = m * n;
                 _vc.resultString = [NSString stringWithFormat:@"%@ = %g",_vc.resultString, n];
+                NSLog(@"%@",_vc.resultString);
+                [_vc updateResultLabel];
             }
             if (operation == 104){
-                _vc.resultString = [NSString stringWithFormat:@"%g /", n];
-                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, m];
+                _vc.resultString = [NSString stringWithFormat:@"%g /", m];
+                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, n];
                 n = m / n;
                 _vc.resultString = [NSString stringWithFormat:@"%@ = %g",_vc.resultString, n];
+                NSLog(@"%@",_vc.resultString);
+                [_vc updateResultLabel];
             }
-            if (operation == 201){
-                double fact = 1;
-                NSLog(@"%g %g",n, m);
-                for(int i=0; i<5; i++){
-                    for (int j=0; j<=i; j++){
-                        fact = fact * (2*i+1);
-                    }
-                    n = n + pow(-1, i)*(pow(n, 2*i-1))/fact;
-                    fact=1;
-                }
-                [self toDisplay];
-            }
-            if (operation == 202){
-                double fact = 1;
-                for(int i=0; i<6; i++){
-                    for (int j=0; j<=i; j++){
-                        fact = fact * (2*i);
-                    }
-                    m = m + pow(-1, i)*(pow(m, 2*i))/fact;
-                    fact=1;
-                }
-                [self toDisplay];
-            }
+//            if (operation == 201){
+//                double fact = 1;
+//                NSLog(@"%g %g",n, m);
+//                for(int i=0; i<5; i++){
+//                    for (int j=0; j<=i; j++){
+//                        fact = fact * (2*i+1);
+//                    }
+//                    n = n + pow(-1, i)*(pow(n, 2*i-1))/fact;
+//                    fact=1;
+//                }
+//                [self toDisplay];
+//            }
+//            if (operation == 202){
+//                double fact = 1;
+//                for(int i=0; i<6; i++){
+//                    for (int j=0; j<=i; j++){
+//                        fact = fact * (2*i);
+//                    }
+//                    m = m + pow(-1, i)*(pow(m, 2*i))/fact;
+//                    fact=1;
+//                }
+//                [self toDisplay];
+//            }
         }
     }
     m = n;
