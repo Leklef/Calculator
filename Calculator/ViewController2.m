@@ -10,9 +10,7 @@
 
 @interface ViewController2 ()
 
-@property (weak, nonatomic) IBOutlet UILabel *resultLabel1;
-@property (weak, nonatomic) IBOutlet UILabel *resultLabel2;
-@property (weak, nonatomic) IBOutlet UILabel *resultLabel3;
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *secretImage;
 @end
 
@@ -23,17 +21,8 @@
     // Do any additional setup after loading the view.
 }
 
-- (void) updateResultLabel: (int)num{
-    if (num == 0){
-        NSLog(@"%@", [_historyArray objectAtIndex:0]);
-        _resultLabel1.text = [_historyArray objectAtIndex:0];
-    }
-    if (num == 1) {
-        _resultLabel2.text = [_historyArray objectAtIndex:1];
-    }
-    if (num == 2) {
-         _resultLabel3.text = [_historyArray objectAtIndex:2];
-    }
+- (void) updateResultLabel{
+    _resultLabel.text = _resultString;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,11 +55,5 @@
             break;
     }
 }
-
-//- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-//    _resultLabel1.text = [_historyArray objectAtIndex:0];
-//    _resultLabel2.text = [_historyArray objectAtIndex:1];
-//    _resultLabel3.text = [_historyArray objectAtIndex:2];
-//}
 
 @end

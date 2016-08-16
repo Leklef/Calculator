@@ -22,7 +22,6 @@
     [super viewDidLoad];
     _index = 0;
     _vc = [[ViewController2 alloc]init];
-    _vc.historyArray = [NSMutableArray arrayWithCapacity: 3];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -59,19 +58,29 @@
         if (!operationEnter){
             NSLog(@"%li", (long)[sender tag]);
             if (operation == 101){
-                //NSString *str = [NSString stringWithFormat:@"%g", n];
-                //[_vc.historyArray insertObject:str atIndex:_index];
-                //[_vc updateResultLabel:_index];
+                _vc.resultString = [NSString stringWithFormat:@"%g +", n];
+                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, m];
+                [_vc updateResultLabel];
                 n = m + n;
+                _vc.resultString = [NSString stringWithFormat:@"%@ = %g",_vc.resultString, n];
             }
             if (operation == 102){
+                _vc.resultString = [NSString stringWithFormat:@"%g -", n];
+                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, m];
                 n = m - n;
+                _vc.resultString = [NSString stringWithFormat:@"%@ = %g",_vc.resultString, n];
             }
             if (operation == 103){
+                _vc.resultString = [NSString stringWithFormat:@"%g *", n];
+                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, m];
                 n = m * n;
+                _vc.resultString = [NSString stringWithFormat:@"%@ = %g",_vc.resultString, n];
             }
             if (operation == 104){
+                _vc.resultString = [NSString stringWithFormat:@"%g /", n];
+                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, m];
                 n = m / n;
+                _vc.resultString = [NSString stringWithFormat:@"%@ = %g",_vc.resultString, n];
             }
             if (operation == 201){
                 double fact = 1;

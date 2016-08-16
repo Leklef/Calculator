@@ -10,8 +10,8 @@
 
 @interface ViewController2 : UIViewController
 
-@property (strong, nonatomic) NSMutableArray *historyArray;
+@property (strong, nonatomic) NSString *resultString;
 
-- (void) updateResultLabel : (int) num;
+- (void) updateResultLabel;
 
 @end
