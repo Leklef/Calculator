@@ -10,7 +10,6 @@
 
 @interface ViewController2 ()
 
-@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *secretImage;
 @end
 
@@ -18,17 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
-}
-
-- (void) updateResultLabel{
-    _resultLabel.text = _resultString;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
+
 - (IBAction)secretButton:(id)sender {
     int randomValue = 1 + (random() % 6);
     NSLog(@"%i", randomValue);

@@ -7,12 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "ViewController2.h"
+#import "ViewController3.h"
 
 @interface ViewController ()
 
 @property (nonatomic) int index;
-@property (strong, nonatomic) ViewController2 *vc;
+@property (strong, nonatomic)NSString *result;
 
 @end
 
@@ -20,8 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _index = 0;
-    _vc = [[ViewController2 alloc]init];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -57,39 +55,35 @@
     if (doubleOperation){
         if (!operationEnter){
             NSLog(@"%li", (long)[sender tag]);
-            if (operation == 101){
-                _vc.resultString = [NSString stringWithFormat:@"%g +", m];
-                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, n];
+            if (operation == 101){ //сложение
+                _result = [NSString stringWithFormat:@"%g +", m];
+                _result = [NSString stringWithFormat:@"%@ %g",_result, n];
                 n = m + n;
-                _vc.resultString = [NSString stringWithFormat:@"%@ = %g",_vc.resultString, n];
-                NSLog(@"%@",_vc.resultString);
-                [_vc updateResultLabel];
+                _result = [NSString stringWithFormat:@"%@ = %g",_result, n];
+                NSLog(@"%@",_result);
             }
-            if (operation == 102){
-                _vc.resultString = [NSString stringWithFormat:@"%g -", m];
-                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, n];
+            if (operation == 102){//вычитание
+                _result = [NSString stringWithFormat:@"%g -", m];
+                _result = [NSString stringWithFormat:@"%@ %g",_result, n];
                 n = m - n;
-                _vc.resultString = [NSString stringWithFormat:@"%@ = %g",_vc.resultString, n];
-                NSLog(@"%@",_vc.resultString);
-                [_vc updateResultLabel];
+                _result = [NSString stringWithFormat:@"%@ = %g",_result, n];
+                NSLog(@"%@",_result);
             }
-            if (operation == 103){
-                _vc.resultString = [NSString stringWithFormat:@"%g *", m];
-                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, n];
+            if (operation == 103){//умножение
+                _result = [NSString stringWithFormat:@"%g *", m];
+                _result = [NSString stringWithFormat:@"%@ %g",_result, n];
                 n = m * n;
-                _vc.resultString = [NSString stringWithFormat:@"%@ = %g",_vc.resultString, n];
-                NSLog(@"%@",_vc.resultString);
-                [_vc updateResultLabel];
+                _result = [NSString stringWithFormat:@"%@ = %g",_result, n];
+                NSLog(@"%@",_result);
             }
-            if (operation == 104){
-                _vc.resultString = [NSString stringWithFormat:@"%g /", m];
-                _vc.resultString = [NSString stringWithFormat:@"%@ %g",_vc.resultString, n];
+            if (operation == 104){ //деление
+                _result = [NSString stringWithFormat:@"%g /", m];
+                _result = [NSString stringWithFormat:@"%@ %g",_result, n];
                 n = m / n;
-                _vc.resultString = [NSString stringWithFormat:@"%@ = %g",_vc.resultString, n];
-                NSLog(@"%@",_vc.resultString);
-                [_vc updateResultLabel];
+                _result = [NSString stringWithFormat:@"%@ = %g",_result, n];
+                NSLog(@"%@",_result);
             }
-//            if (operation == 201){
+//            if (operation == 201){ //синус
 //                double fact = 1;
 //                NSLog(@"%g %g",n, m);
 //                for(int i=0; i<5; i++){
@@ -101,7 +95,7 @@
 //                }
 //                [self toDisplay];
 //            }
-//            if (operation == 202){
+//            if (operation == 202){  //косинус
 //                double fact = 1;
 //                for(int i=0; i<6; i++){
 //                    for (int j=0; j<=i; j++){
@@ -134,6 +128,11 @@
 -(void) toDisplay {
     NSString *str = [NSString stringWithFormat:@"%g", n];
     [displayLabel setText:str];
+}
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    ViewController3 *vc3 = [segue destinationViewController];
+    vc3.resultString = _result;
 }
 
 @end

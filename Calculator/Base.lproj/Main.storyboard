@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Калькулятор-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WLp-6i-74a">
-                                <rect key="frame" x="0.0" y="20" width="375" height="154"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="92"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
                                 <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -281,10 +281,22 @@
                                     <action selector="num:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1O9-nq-jjM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cAL-ol-vq2">
+                                <rect key="frame" x="0.0" y="169" width="375" height="38"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.39576937099999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
+                                <state key="normal" title="Предыдущий результат">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gBk-eW-M1K" kind="push" id="tyU-kk-T2z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Калькулятор" image="calculator-2" id="FOX-Dw-h2r"/>
+                    <navigationItem key="navigationItem" id="XsM-e5-Eo7"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="displayLabel" destination="WLp-6i-74a" id="KqB-oU-a7i"/>
@@ -292,9 +304,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702.5" y="803.5"/>
+            <point key="canvasLocation" x="1541.5" y="1215.5"/>
         </scene>
-        <!--Результат-->
+        <!--View Controller3-->
+        <scene sceneID="WnQ-rO-0i7">
+            <objects>
+                <viewController id="gBk-eW-M1K" customClass="ViewController3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wac-JZ-zSU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результат" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cVa-De-YRV">
+                                <rect key="frame" x="0.0" y="241" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="45"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PLT-wi-7se"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="resultLabel" destination="cVa-De-YRV" id="ZIV-xJ-SY9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sWI-oO-PEZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2108.5" y="1115.5"/>
+        </scene>
+        <!--View Controller2-->
         <scene sceneID="O2v-sd-vZ8">
             <objects>
                 <viewController id="RmT-hc-GHg" customClass="ViewController2" sceneMemberID="viewController">
@@ -302,43 +343,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat1" id="gCk-Yf-uQP">
-                                <rect key="frame" x="0.0" y="20" width="375" height="209"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результат" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cVa-De-YRV">
-                                <rect key="frame" x="0.0" y="359" width="375" height="134"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="p6P-lD-oaf">
-                                <rect key="frame" x="0.0" y="228" width="375" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="492" width="375" height="69"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
-                                <state key="normal" title="Секретная кнопка">
+                                <state key="normal" title="Чудо кнопка">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="secretButton:" destination="RmT-hc-GHg" eventType="touchUpInside" id="ahx-br-FAc"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat1" id="gCk-Yf-uQP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="331"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Результат" image="ravno" id="on0-E0-z0T"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="on0-E0-z0T"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="resultLabel" destination="cVa-De-YRV" id="9iU-d9-png"/>
                         <outlet property="secretImage" destination="gCk-Yf-uQP" id="MMp-OO-Q7d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RnJ-ZJ-rW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1210.5" y="346.5"/>
+            <point key="canvasLocation" x="1180.5" y="322.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tSG-r2-q9M">
@@ -351,7 +383,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="RWd-42-vjM"/>
+                        <segue destination="htE-6L-sop" kind="relationship" relationship="viewControllers" id="RWd-42-vjM"/>
                         <segue destination="RmT-hc-GHg" kind="relationship" relationship="viewControllers" id="0CW-Ql-I9e"/>
                     </connections>
                 </tabBarController>
@@ -359,10 +391,28 @@
             </objects>
             <point key="canvasLocation" x="153" y="339"/>
         </scene>
+        <!--Калькулятор-->
+        <scene sceneID="Gux-dX-Um4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="htE-6L-sop" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Калькулятор" image="calculator-2" id="FOX-Dw-h2r"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jkC-Ge-gTe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xd4-nT-QkO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GMV-qm-8a6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954.5" y="1215.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="calculator-2" width="24" height="24"/>
         <image name="cat1" width="1680" height="1050"/>
-        <image name="ravno" width="24" height="24"/>
     </resources>
 </document>

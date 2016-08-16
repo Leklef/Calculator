@@ -1,5 +1,5 @@
 //
-//  ViewController2.h
+//  ViewController3.h
 //  Calculator
 //
 //  Created by Ленар on 16.08.16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController2 : UIViewController
+@interface ViewController3 : UIViewController
 
 @property (strong, nonatomic) NSString *resultString;
 
