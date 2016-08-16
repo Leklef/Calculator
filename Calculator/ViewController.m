@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "ViewController2.h"
 
 @interface ViewController ()
+
+@property (nonatomic) int index;
+@property (strong, nonatomic) ViewController2 *vc;
 
 @end
 
@@ -16,6 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _index = 0;
+    _vc = [[ViewController2 alloc]init];
+    _vc.historyArray = [NSMutableArray arrayWithCapacity: 3];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -52,6 +59,9 @@
         if (!operationEnter){
             NSLog(@"%li", (long)[sender tag]);
             if (operation == 101){
+                //NSString *str = [NSString stringWithFormat:@"%g", n];
+                //[_vc.historyArray insertObject:str atIndex:_index];
+                //[_vc updateResultLabel:_index];
                 n = m + n;
             }
             if (operation == 102){

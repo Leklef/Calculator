@@ -11,10 +11,11 @@
 		AE33A8DD1D61AB1A0017A59B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33A8DC1D61AB1A0017A59B /* AppDelegate.m */; };
 		AE33A8E01D61AB1A0017A59B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33A8DF1D61AB1A0017A59B /* ViewController.m */; };
 		AE33A8E31D61AB1A0017A59B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE33A8E11D61AB1A0017A59B /* Main.storyboard */; };
-		AE33A8E51D61AB1A0017A59B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE33A8E41D61AB1A0017A59B /* Assets.xcassets */; };
 		AE33A8E81D61AB1A0017A59B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE33A8E61D61AB1A0017A59B /* LaunchScreen.storyboard */; };
 		AE33A8F31D61AB1A0017A59B /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33A8F21D61AB1A0017A59B /* CalculatorTests.m */; };
 		AE33A8FE1D61AB1A0017A59B /* CalculatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE33A8FD1D61AB1A0017A59B /* CalculatorUITests.m */; };
+		AEEB993B1D6302470022ED69 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEB993A1D6302470022ED69 /* ViewController2.m */; };
+		AEEB993D1D6305860022ED69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEEB993C1D6305860022ED69 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,6 @@
 		AE33A8DE1D61AB1A0017A59B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AE33A8DF1D61AB1A0017A59B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AE33A8E21D61AB1A0017A59B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AE33A8E41D61AB1A0017A59B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE33A8E71D61AB1A0017A59B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE33A8E91D61AB1A0017A59B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE33A8EE1D61AB1A0017A59B /* CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +51,9 @@
 		AE33A8F91D61AB1A0017A59B /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE33A8FD1D61AB1A0017A59B /* CalculatorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorUITests.m; sourceTree = "<group>"; };
 		AE33A8FF1D61AB1A0017A59B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEEB99391D6302470022ED69 /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		AEEB993A1D6302470022ED69 /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		AEEB993C1D6305860022ED69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +104,10 @@
 		AE33A8D71D61AB1A0017A59B /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				AE33A90C1D61AB9D0017A59B /* ViewController */,
-				AE33A90B1D61AB770017A59B /* AppDeligate */,
-				AE33A8E11D61AB1A0017A59B /* Main.storyboard */,
-				AE33A8E41D61AB1A0017A59B /* Assets.xcassets */,
-				AE33A8E61D61AB1A0017A59B /* LaunchScreen.storyboard */,
-				AE33A8E91D61AB1A0017A59B /* Info.plist */,
+				AEF4A9851D62E65E00207398 /* AppDeligate */,
+				AEF4A9841D62E5E500207398 /* Controller */,
+				AEF4A9831D62E5DC00207398 /* View */,
+				AEF4A9821D62E5D200207398 /* Model */,
 				AE33A8D81D61AB1A0017A59B /* Supporting Files */,
 			);
 			path = Calculator;
@@ -138,22 +139,42 @@
 			path = CalculatorUITests;
 			sourceTree = "<group>";
 		};
-		AE33A90B1D61AB770017A59B /* AppDeligate */ = {
+		AEF4A9821D62E5D200207398 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AEEB993C1D6305860022ED69 /* Assets.xcassets */,
+				AE33A8E61D61AB1A0017A59B /* LaunchScreen.storyboard */,
+				AE33A8E91D61AB1A0017A59B /* Info.plist */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AEF4A9831D62E5DC00207398 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE33A8E11D61AB1A0017A59B /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		AEF4A9841D62E5E500207398 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AE33A8DE1D61AB1A0017A59B /* ViewController.h */,
+				AE33A8DF1D61AB1A0017A59B /* ViewController.m */,
+				AEEB99391D6302470022ED69 /* ViewController2.h */,
+				AEEB993A1D6302470022ED69 /* ViewController2.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		AEF4A9851D62E65E00207398 /* AppDeligate */ = {
 			isa = PBXGroup;
 			children = (
 				AE33A8DB1D61AB1A0017A59B /* AppDelegate.h */,
 				AE33A8DC1D61AB1A0017A59B /* AppDelegate.m */,
 			);
 			name = AppDeligate;
-			sourceTree = "<group>";
-		};
-		AE33A90C1D61AB9D0017A59B /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				AE33A8DE1D61AB1A0017A59B /* ViewController.h */,
-				AE33A8DF1D61AB1A0017A59B /* ViewController.m */,
-			);
-			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE33A8E81D61AB1A0017A59B /* LaunchScreen.storyboard in Resources */,
-				AE33A8E51D61AB1A0017A59B /* Assets.xcassets in Resources */,
+				AEEB993D1D6305860022ED69 /* Assets.xcassets in Resources */,
 				AE33A8E31D61AB1A0017A59B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE33A8E01D61AB1A0017A59B /* ViewController.m in Sources */,
+				AEEB993B1D6302470022ED69 /* ViewController2.m in Sources */,
 				AE33A8DD1D61AB1A0017A59B /* AppDelegate.m in Sources */,
 				AE33A8DA1D61AB1A0017A59B /* main.m in Sources */,
 			);
@@ -523,6 +545,7 @@
 				AE33A9041D61AB1A0017A59B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE33A9051D61AB1A0017A59B /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +554,7 @@
 				AE33A9071D61AB1A0017A59B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE33A9081D61AB1A0017A59B /* Build configuration list for PBXNativeTarget "CalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +563,7 @@
 				AE33A90A1D61AB1A0017A59B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
